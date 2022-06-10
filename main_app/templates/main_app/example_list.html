@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Example List</h1>
+
+{% for example in example_list %}
+  <a href="{% url 'examples_detail' example.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ example.explanation }}</span>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}

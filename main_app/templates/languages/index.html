@@ -5,11 +5,13 @@
 
 {% for language in languages %}
   <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ language.name }}</span>
-      <p>Use: {{ language.use }}</p>
-      <p>Description: {{ language.description }}</p>
-    </div>
+    <a href="{% url 'detail' language.id %}">
+      <div class="card-content">
+        <span class="card-title">{{ language.name }}</span>
+        <p>Use: {{ language.use }}</p>
+        <p>Description: {{ language.description }}</p>
+      </div>
+    </a>
   </div>
 {% endfor %}
 
